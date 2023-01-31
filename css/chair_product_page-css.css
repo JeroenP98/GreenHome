@@ -1,0 +1,191 @@
+ /* Style Sheet Chair Product Page */
+
+ @media screen and (min-width: 600px){
+
+    .Grid_2{
+        display: grid;
+        width: 100%; 
+        height: auto;
+        background-color: #FFFFFF;
+    }
+    
+    .Content_2{
+        margin-bottom: 120px;
+    }
+
+    .Grey_Background{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #747476;
+        width: 1400px; 
+        height: 450px;
+        margin-left: 75px;
+        margin-top: 100px;
+        border-radius: 20px;
+    }
+    
+    .Photo_Grey_Chair{
+        position: absolute;
+        top: 105px;
+        left: 650px;
+        z-index: 1;
+    }
+    
+    .Photo_Grey_Chair > img{
+        border-radius: 25px;
+        height: 550px;
+        width: 800px;
+    } 
+    
+    .Text_On_Grey_Background{
+        top: 240px;
+        left: 130px;
+        position: absolute;
+        height: 400px;
+        width: 340px;
+    }
+    
+    .Text_On_Grey_Background > h3{
+        color: #d8d8d8;
+        text-align: left;
+        margin-bottom: 30px;
+        font-size: 35px;
+    }
+    
+    .Text_On_Grey_Background .section1{
+        font-family: 'Inter',  sans-serif;
+        font-size: 24px;
+        color:#FFFFFF;
+        margin-bottom: 30px;
+    }
+    
+    .Text_On_Grey_Background .section2{
+        font-family: 'Inter',  sans-serif;
+        font-size: 18px;
+        color:#d8d8d8;
+    }
+    
+    .Order_Button{
+        width: 235px;
+        height: 72px;
+        background-color:#747476 ;
+        border-color: #FFFFFF;
+        border-style: solid;
+        border-radius: 100px;
+        border-width: 6px;
+        top: 575px;
+        left: 240px;
+        position: absolute;
+        z-index: 1;
+        display: block;
+    }
+    
+    .Order_Button_Text{
+        margin: 0px;
+        margin-top: 15px;
+        text-align: center;
+        font-size: 32px;
+        color:#ffffff;
+    }
+    
+    .Order_Button:hover{
+        background-color: #9d9da1;
+    }   
+}
+
+@media screen and (max-width: 600px){
+
+    .Grey_Background{
+        display: flex;
+        justify-content: flex-start;
+        background-color: #747476;
+        width: 100vw; 
+        height: 100vw;
+        margin-left: 0%;
+        margin-top: 350px;
+        border-radius: 20px;
+    }
+
+    .Photo_Grey_Chair{
+
+        position: absolute;
+        top: 105px;
+        left: 0%;
+        z-index: 1;
+    }
+    .Text_On_Grey_Background{
+        top: 460px;
+        left: 20px;
+        position: absolute;
+        height: 400px;
+        width: 340px;
+    }
+
+    .Order_Button{
+        width: 150px;
+        height: 45px;
+        background-color:#747476 ;
+        border-color: #FFFFFF;
+        border-style: solid;
+        border-radius: 100px;
+        border-width: 3px;
+        top: 760px;
+        left: 110px;
+        position: absolute;
+        z-index: 1;
+        display: block;
+    }
+
+    .Grid_2{
+        display: grid;
+        width: 100%; 
+        height: auto;
+        background-color: #FFFFFF;
+    }
+    
+     .Content_2{ 
+         margin-bottom: 0px; 
+     } 
+
+    .Photo_Grey_Chair > img{
+        border-radius: 25px;
+        height: 80vw;
+        width: 100vw;
+
+    } 
+    
+    .Text_On_Grey_Background > h3{
+        color: #d8d8d8;
+        text-align: left;
+        margin-bottom: 30px;
+        font-size: 35px;
+    }
+    
+    .Text_On_Grey_Background .section1{
+        font-family: 'Inter',  sans-serif;
+        font-size: 24px;
+        color:#FFFFFF;
+        margin-bottom: 30px;
+    }
+    
+    .Text_On_Grey_Background .section2{
+        font-family: 'Inter',  sans-serif;
+        font-size: 18px;
+        color:#d8d8d8;
+        width: 85%;
+    }
+    
+    .Order_Button_Text{
+        margin: 0px;
+        margin-top: 7px;
+        text-align: center;
+        font-size: 24px;
+        color:#ffffff;
+    }
+    
+    .Order_Button:hover{
+        background-color: #9d9da1;
+    }
+
+}
+

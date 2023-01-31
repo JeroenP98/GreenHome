@@ -1,0 +1,213 @@
+body {
+  margin: auto;
+}
+
+form {
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  color: #666;
+  text-align: center;
+  width: 750px;
+  padding-top: 42px;
+  margin: 50px auto;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+form {
+  display: flex;
+  height: fit-content;
+  flex-direction: column;
+}
+
+.optional {
+  justify-content: center;
+}
+
+#username.button,
+#password.button,
+#submit.button {
+  width: 408px;
+}
+
+.optionalText {
+  display: flex;
+  width: 408px;
+
+  gap: 50px;
+}
+
+.header {
+  color: #508279;
+  font-weight: 700;
+  font-size: 28px;
+  padding-bottom: 15px;
+}
+
+.optional {
+  display: flex;
+  justify-content: center;
+}
+
+#space {
+  padding: 1em;
+}
+
+.footer {
+  background: #f2f2f2;
+  height: 45px;
+  border-radius: 0 0 4px 4px;
+  font-size: 14px;
+  margin-top: 88px;
+  padding-top: 3px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer .reg {
+  color: #508279;
+  font-weight: bold;
+}
+
+div.reg {
+  height: fit-content;
+  align-self: center;
+}
+
+.p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: black;
+}
+
+#submit.button.reset {
+  margin-top: 0;
+}
+
+/* Fields and Button */
+.button {
+  width: 40%;
+  height: 42px;
+  margin: 13px 0px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background: #f2f3f5;
+  background-repeat: no-repeat;
+  background-position: 15px 17px;
+  text-indent: 17%;
+  font-family: inherit;
+  font-size: 16px;
+  color: #737373;
+}
+
+#submit {
+  background-color: #508279;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 8px;
+  text-indent: 0;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+#submit:hover {
+  background-color: #508279;
+}
+
+/*Mail, Username & Password Icons */
+#username {
+  background-image: url(images/user-svgrepo-com.svg);
+  background-size: 24px auto;
+  background-position-y: center;
+  background-position-x: 25px;
+}
+
+#password {
+  background-image: url(images/lock-svgrepo-com.svg);
+  background-size: 24px auto;
+  background-position-y: center;
+  background-position-x: 25px;
+}
+
+@media screen and (max-width: 750px) {
+  form {
+    text-align: center;
+    width: 285px;
+    padding-top: 42px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: sans-serif;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+
+  .footer {
+    width: 285px;
+  }
+
+  #username.button,
+  #password.button {
+    width: fit-content;
+  }
+
+  #submit.button {
+    width: 199px;
+  }
+
+  .optional {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 20px;
+    width: 199px;
+  }
+
+  .optionalText {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 199px;
+  }
+
+  .optionalText div {
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  div.div1 {
+    justify-content: start;
+  }
+
+  form {
+    align-items: center;
+  }
+
+  .optionalText #remember {
+    margin: 0 0 0 10px;
+  }
+
+  #submit {
+    font-size: 12px;
+  }
+
+  #password,
+  #username {
+    background-size: 16px auto;
+    background-position-x: 10px;
+  }
+}

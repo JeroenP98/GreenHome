@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenHome | Home page</title>
+  <link rel="stylesheet" href="css/index-css.css">
+  <link rel="stylesheet" href="css/navbar-css.css">
+  <link rel="shortcut icon" href="images/logo-green.svg">
+  <script src="javascript/javascript.js" defer></script>
+  <script src="https://kit.fontawesome.com/65fb36ce5e.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Center Page -->
+  <div class="centerPage">
+
+    <!-- NavBar -->
+    <nav>
+      <div class="nav-whitespace">
+        <div class="topnav" id="nav">
+          <div class="navbackground">
+            <!-- NavBar item: company logo link-->
+            <a href="index.html" aria-label="Link naar de hoofd pagina">
+              <img class="navitem greenhome-logo " src="images/logo-green.svg" alt="GreenHome logo">
+            </a>
+            <!-- NavBar item: text links -->
+            <a class="navitem collection changeColor" href="collectie.html" aria-label="Link naar de Collectie pagina">
+              <p id="test" class="changeTc">COLLECTIE</p>
+            </a>
+            <a class="navitem collection changeColor" href="duurzaamheid.html"
+              aria-label="Link naar de Duurzamheid pagina">
+              <p class="changeTc">DUURZAAMHEID</p>
+            </a>
+            <a class="navitem collection changeColor" href="overons.html" aria-label="Link naar de Over Ons pagina">
+              <p class="changeTc">OVER ONS</p>
+            </a>
+            <a class="navitem collection" href="contact.html" aria-label="Link naar de Contact pagina">CONTACT</a>
+
+            <!-- NavBar item: icon (user profile & shoppingcart) links -->
+            <!-- user profile -->
+            <a class="navIcon userIcon navitem collection" href="login.html"
+              aria-label="Link naar het gebruikersprofiel">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="navitem user-icon">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </a>
+            <!-- shoppingcart -->
+            <a class="navIcon shopIcon navitem collection" href="winkelwagen.html"
+              aria-label="Link naar het winkelmandje">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" id="shopBasket" class="navitem shop-icon">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+              </svg>
+            </a>
+
+            <!-- NavBar item: icon TEXT (user profile & shoppingcart) links -->
+            <!--shoppingcart TEXT (used in hamburger menu)  -->
+            <a id="iconText-shop" class="iconText navitem collection" href="winkelwagen.html"
+              aria-label="Link naar het winkelmandje">WINKELWAGEN</a>
+            <!--user profile TEXT (used in hamburger menu)  -->
+            <a id="iconText-user" class="iconText navitem collection" href="login.html"
+              aria-label="Link naar het gebruikersprofiel">PROFIEL</a>
+            <!--NavBar item: hamburger icon Links  -->
+            <a href="javascript:void(0);" class="icon" id="hamburger" onclick="hamburger()" aria-label="hamburger menu">
+              <button class="menu"
+                onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                aria-label="Main Menu">
+                <svg class="hamburgerIcon" width="24" height="24" viewBox="0 0 100 100">
+                  <path class="line line1"
+                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                  <path class="line line2" d="M 20,50 H 80" />
+                  <path class="line line3"
+                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+              </button>
+            </a>
+          </div>
+        </div> <!-- class="topnav" id="nav"-->
+      </div> <!-- class="nav-whitespace"-->
+    </nav>
+    </header> <!-- END NavBar -->
+
+  </div> <!-- class="centerPage"-->
+
+  <!-- Back to top button-->
+  <button onclick="backToTop()" id="top"><img src="./images/arrowhead-up.png" alt="Back to top button"></button>
+
+  <!-- Start of grid-->
+  <div class="indexGrid">
+    <div class="grid_item_1">
+      <img src="images/virender-singh-hE0nmTffKtM-unsplash.jpg" alt="Company impression">
+    </div>
+    <div class="grid_item_2">
+      <h1>GreenHome</h1>
+      <h2>Furniture with an eco friendly origin</h2>
+      <a href="collectie.html"><button class="button">Discover</button></a>
+    </div>
+
+    <div class="grid_item_3">
+      <h1>Een impactvolle manier van wonen</h1>
+      <p class="indexText">Stijl je woonkamer met de meest moderne stijlen van dit moment, met een duurzame boventoon
+      </p>
+    </div>
+
+    <div class="grid_item_4">
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <a href="collectie.html"><img src="./images/bilal-mansuri-Pp5IwU-m8uc-unsplash.jpg"
+              class="slideshowImage"></a>
+          <a href="collectie.html">
+            <div class="text">Bekijk onze tafelselectie</div>
+          </a>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <a href="collectie.html"><img src="./images/jason-wang-NxAwryAbtIw-unsplash.jpg" class="slideshowImage"></a>
+          <a href="collectie.html">
+            <div class="text">Bekijk onze woonkamer designs</div>
+          </a>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <a href="collectie.html"><img src="./images/guven-gunes-Iy3GN4iPLW8-unsplash.jpg" class="slideshowImage"></a>
+          <a href="collectie.html">
+            <div class="text">Bekijk onze bankenselectie</div>
+          </a>
+        </div>
+
+      </div>
+      <br>
+
+      <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="grid_item_5">
+      <a href="./collectie.html"><img src="./images/spacejoy-0JGRXomKXSw-unsplash.jpg"
+          alt="link naar productpagina"></a>
+    </div>
+
+    <div class="grid_item_6">
+      <h1>Duurzaamheid voorop</h1>
+      <p class="indexText">Duurzaam ontwikkelde meubelstukken voor de milieubewuste geest</p>
+    </div>
+  </div>
+  <footer class="footer-distributed">
+    <div class="footer-right">
+      <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+    <div class="footer-left">
+      <p class="footer-links">
+        <a class="link-1" href="#">Home</a>
+        <a href="collectie.html">Collectie</a>
+        <a href="duurzaamheid.html">Duurzaamheid</a>
+        <a href="overons.html">Over ons</a>
+        <a href="contact.html">Contact</a>
+        <a href="winkelwagen.html">Winkelwagen</a>
+      </p>
+      <p>GreenHome &copy; 2022</p>
+    </div>
+
+  </footer>
+</body>
+
+</html>

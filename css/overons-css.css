@@ -1,0 +1,127 @@
+
+.section {
+
+    /* Grid */
+    display: grid;
+    /* background-color: #343A40; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px repeat(3, 419.6875px);
+}
+
+
+
+
+.our-mission {
+    background-color: #508279;
+}
+
+.container2.our-vision {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)) url(/images/middle-box.png);
+    background-size: cover;
+    height: 100%;
+
+}
+
+
+
+.text-box {
+    /* GRID */
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-rows: 419.6875px;
+    gap: 50px;
+    padding: 0 50px 0 20px;
+    justify-items: center;
+    align-items: center;
+    z-index: 1;
+    
+    /* STYLE */
+    color: #FFF;
+}
+
+.values {
+    color: #508279;
+}
+
+.about-us-cont {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 200px;
+    color:#343A40;
+    font-size: 42px;
+    
+}
+
+.text-header {
+    font-size: 24px;
+}
+
+.text-box {
+    font-size: 18px;
+}
+
+/* Styling About Us Containers END */
+
+@media screen and (max-width: 850px) {
+    .section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        height: 315px;
+    }
+
+
+    .our-vision {
+        background-size: 100%
+    }
+
+    .about-us-cont {
+        height: 100px;
+        margin-bottom: 50px;
+    }
+
+    .text-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 50px
+    }
+
+    /* .our-values {
+        background-color: #FFF;
+    } */
+}
+
+@media screen and (max-width: 650px) {
+    .section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px repeat(3, 1fr);
+    }
+
+
+
+    /* .our-vision {
+
+        background-size: 100%
+    } */
+
+    .about-us-cont {
+        height: 50px;
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+
+    /* .text-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 50px
+    } */
+
+    /* .our-values {
+        background-color: #FFF;
+    } */
+}

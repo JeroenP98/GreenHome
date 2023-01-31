@@ -1,0 +1,667 @@
+/* global reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: inter, sans-serif;
+}
+
+.menu.active {
+    display: flex;
+}
+
+/* navbar styling */
+
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    position: fixed;
+    top:0;
+    width: 100%;
+    grid-area: header;
+}
+
+
+.topnav a {
+    float: left;
+    display: flex;
+    color: #343A40;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    height: 24px;
+    align-items: center;   
+}
+
+    /*underlines the anchor el when active (used with JS)  */
+/* .topnav a.active {
+    border-bottom: 2px solid #508279;
+} */
+
+/* .topnav a.changecolor.active {
+    border-bottom: 2px solid #343A40
+} */
+
+/* styles the anchor and icon on hover and active (active applied with JS) */
+.topnav a:hover, .hamburgerIcon:hover,
+.topnav a.active, .hamburgerIcon.active{
+    background-color: rgba(221, 221, 221, 0.234);
+}
+
+
+  /* navbar background changing when scrolling (used with JS) */
+.bgColor {
+    background-color: #fff;
+    transition: all 0.6s;
+    
+}
+
+
+  
+  /* some spacing for the navbar, so items arent falling under it */
+
+.nav-whitespace {
+    margin-bottom: 62px;
+    overflow: hidden;
+ 
+}
+
+/* styling icons */
+.userIcon {
+    position: fixed;
+    right: 0;
+}
+
+.shopIcon {
+    position: fixed;
+    right: 52px;
+}
+
+/* .icon {
+    position: fixed;
+    right: 0;
+} */
+
+.topnav .icon {
+    display: none;
+    
+}
+
+
+
+/* Styles the shoppingbasket-icon SVG */
+.shop-icon {
+    height: 27.28px;
+    width: 37.07px;
+    position: relative;
+    display: flex;
+    
+}
+
+/* .topnav a.changeColor {
+    color: #fff;
+} */
+
+/* .CcOnScroll.topnav a {
+    color: #343A40;
+} */
+
+/* Styles the user-icon SVG */
+.user-icon {
+    height: 27.28px;
+    width: 37.07px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Styles the company-icon SVG */
+.greenhome-logo {
+    height: 27.28px;
+    width: 37.07px;
+    padding: 12px;
+    position: relative;
+}
+
+  /* Hides the two anchor elements when the width is more than 685px, will be displayed in the burgermenu once width drops below 685px */
+a.iconText {display: none;}
+a.iconText.active {display: none;}
+  
+  /* uses MediaQuery to make the navbar responsive. when width drops below 685px, icons will disappear (except for the logo (first child)). */
+@media screen and (max-width: 768px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+
+    a.iconText  {display: relative;}
+    .topnav.responsive a.navIcon {display: none;}
+}
+  
+/* Uses MediaQuery to display the burgermenu icon */
+@media screen and (max-width: 768px) {
+    .topnav.responsive .icon {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+     
+    }
+
+    p.changeTc {
+        color: #343A40 !Important; 
+    }
+
+
+    .greenhome-logo {
+        position: absolute;
+        /* top: 0;
+        left: 0; */
+        top: 0;
+        left: 14;
+    }
+
+    /* .topnav a, .topnav a:hover, .topnav a.responsive, .topnav a.active{
+        background-color: #fff;
+    } */
+
+    .navbackground {
+        background-color: #fff;
+
+    }
+}
+
+
+
+/* Uses MediaQuery to stop showing the two anchor elements, from earlier that are hidden, when active*/
+/* @media all and (min-width: 685px) {
+    a#iconText-shop, a#iconText-user {
+        display: none;
+    }
+} */
+
+
+  
+/* button styling */
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    padding: 0;
+}
+.line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+/* end button styling */
+
+
+
+/* removes the padding on the anchor, so padding can be applied later on the icon so it makes the icon area larger, and it animates on the whole area */
+.topnav a:last-child {
+    padding: 0;
+}
+
+  /* hide double hoverbackground color on hamburger button */
+.topnav a:last-child:hover, .topnav a:first-child:hover {
+    background-color: transparent;
+}
+
+
+
+/* navbar hamburger button paddding so it becomes clickable and the button animates */
+.hamburgerIcon {
+    padding: 14px 16px;
+    
+}
+
+/* The Grid Container */
+.centerPage.collection {
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'left left left left right right'
+    'footer footer footer footer footer footer';
+    /* grid-template-columns: 1fr, 560.28px;
+    grid-template-rows: 691.09px; */
+    width: 100%;
+}
+
+.left-container, .right-container {
+    padding: 10px;
+    height: 791.09px;
+}
+
+.left-container {
+    display: grid;
+    grid-area: left;
+    align-items: end;
+    justify-content: center;
+    /* grid-auto-flow:column */
+    height: 651.09px;
+}
+
+.left-container .grid-3-cols {
+    display: flex;
+    
+}
+
+.box1 {
+    margin-right: 25px;
+    box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.07);
+    border-radius: 12px 12px 12px 12px;
+    
+}
+
+.box2 {
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+    height: 100px;
+    /* box-shadow: 0 0 20px 6px rgba(0, 0, 0, 0.07); */
+    
+}
+
+.right-container {
+    grid-area: right;
+    
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #343A40;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 768px) {
+    .centerPage.collection {
+      grid-template-areas: 
+        'header header header header header header' 
+        'left left left left left left'  
+        'right right right right right right' 
+        'footer footer footer footer footer footer';
+    }
+  }
+
+  .bgContainer.collection{
+    width: 318.5px;
+    height: 372.82px;
+    background-color: #508279;
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 0 17px 17px;
+    box-shadow: 0 0 20px 12px rgba(0, 0, 0, 0.07);
+    left: 93px;
+  }
+
+.furn-img {
+    border-radius: 12px 12px 0 0;
+}
+
+.furn-img-bg {
+    border-radius: 17px;
+    box-shadow: 0 0 20px 12px rgba(0, 0, 0, 0.07);
+    justify-content: end;
+}
+
+/*
+back to top button styling
+*/
+
+#top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: 1px solid #343a40;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+#top img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+#top:hover {
+    background-color: #508279;
+}
+
+/* Footer styling */
+  
+footer {
+    margin-top: 50px;
+}
+
+
+.footer-distributed {
+    background-color: #508279;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: normal 16px sans-serif;
+    padding: 45px 50px;
+}
+  
+.footer-distributed .footer-left p {
+    color: #fff;
+    font-size: 14px;
+    margin: 0;
+}
+  /* Footer links */
+  
+.footer-distributed p.footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+    transition: ease .25s;
+}
+  
+.footer-distributed p.footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    transition: ease .25s;
+}
+  
+.footer-distributed .footer-links a:before {
+    content: "·";
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+  
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+  
+.footer-distributed .footer-right {
+    float: right;
+    margin-top: 6px;
+    max-width: 180px;
+}
+  
+.footer-distributed .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #305d55;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+    transition:all .25s;
+}
+
+  
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+  
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+  
+/* Footer Media Queries */
+  
+@media (max-width: 768px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-right {
+      text-align: center;
+    }
+    .footer-distributed .footer-right {
+      float: none;
+      margin: 0 auto 20px;
+    }
+    .footer-distributed .footer-left p.footer-links {
+      line-height: 1.8;
+    }
+}
+
+/* END FOOTER STYLING */
+
+/* Sustainability Styling */
+
+.sustainabilityContainer {
+    width: 95vw;
+    margin: 0 auto;
+}
+
+.sustainabilityGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 100px);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    grid-auto-rows: 100px;
+    justify-content: center;
+}
+
+.sustItem_1 {
+    grid-area: 2 / 1 / 7 / 13;
+}
+
+.sustItem_1 img {
+    height: 540px;
+    width: 1200px;
+}
+
+.sustItem_2 {
+    grid-area: 1 / 9 / 2 / 11;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.sustItem_2 h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.sustItem_3 {
+    grid-area: 2 / 10 / 3 / 13;
+    background-color: #508279;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.sustItem_3 h2 {
+    font-size: 3rem; 
+    color: white;
+    font-weight: lighter;
+}
+
+.sustItem_4 {
+    grid-area: 3 / 9 / 4 / 11;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sustItem_4 h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.sustItem_5 {
+    grid-area: 8 / 1 / 12 / 9;
+    background-color: #6c9b78 ;
+    border-radius: 17px 0px 0px 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sustItem_5 img {
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+.sustItem_6 {
+    grid-area: 8 / 9 / 12 / 13;
+    background-color: #066649;
+    border-radius: 0px 17px 17px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+.sustItem_6 h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
+.sustItem_6 p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.sustItem_7 {
+    grid-area: 13 / 1 / 17 / 5;
+    background-color: #066649;
+    border-radius: 17px 0px 0px 17px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+.sustItem_7 h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
+.sustItem_7 p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.sustItem_8 {
+    grid-area: 13 / 5 / 17 / 13;
+    background-color: #6c9b78;
+    border-radius: 0px 17px 17px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sustItem_8 img {
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+.sustItem_9 {
+    grid-area: 18 / 1 / 22 / 9;
+    background-color: #6c9b78 ;
+    border-radius: 17px 0px 0px 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sustItem_9 img {
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+.sustItem_10 {
+    grid-area: 18 / 9 / 22 / 13;
+    background-color: #066649;
+    border-radius: 0px 17px 17px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    padding: 0px 15px;
+}
+
+.sustItem_10 h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
+.sustItem_10 p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Sustainability mobile styling */ 
